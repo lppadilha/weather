@@ -1,0 +1,62 @@
+.horas-container {
+    margin: 0 var(--margin-all) 100px var(--margin-all);
+    position: relative;
+
+    
+}
+
+.horas {
+    display: flex;
+    overflow: hidden;
+
+    padding: 15px 20px 0 20px;
+
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(243, 243, 243, 0.00) 0%, #F3F3F3 100%);
+
+    cursor: pointer;
+}
+    .horas .hora {
+        min-width: 117px;
+        padding: 20px 0;
+
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+
+        border-radius: 15px;
+    }
+        .horas .hora:hover {
+            background: linear-gradient(180deg, #F3F3F3 0%, rgba(243, 243, 243, 0.00) 100%);
+        }
+
+        .horas .hora #temp {
+
+        }
+
+        .horas .hora #horario {
+
+        }
+
+        .horas .hora #turno {
+            font-size: 13px;
+            color: #9D9D9D;
+        }
+
+.mask {
+    position: absolute;
+    width: 3%;
+    height: 100%;
+    top: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.mask-left {
+    background: linear-gradient(90deg, #FFF 0%, rgba(243, 243, 243, 0.00) 100%);
+    left: 0;
+}
+
+.mask-right {
+    background: linear-gradient(90deg, rgba(243, 243, 243, 0.00) 0%, #FFF 100%);
+    right: 0;
+}

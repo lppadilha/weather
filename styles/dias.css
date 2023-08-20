@@ -1,0 +1,73 @@
+.dias {
+    display: flex;
+    gap: 50px;
+
+    margin: 80px var(--margin-all) 60px;
+}
+    .box-dias { 
+        width: calc(100% / 3);
+        cursor: pointer;
+
+        transition: opacity .2s;
+    }
+
+    .box-dias .cima {
+        height: 169px;
+        padding: 30px;    
+
+        text-align: right;
+        font-weight: 300;
+        color: white;  
+
+        border-radius: 15px 15px 0px 0px;
+        background-image: linear-gradient(135deg, #d8d8d8 0.01%, #a1a1a1 100%);
+    }
+        .box-dias:hover {
+            opacity: 0.9;
+        }
+
+        .box-dias .cima #dia {
+            font-size: 18px;
+        }
+            .box-dias .cima #dia img {
+                margin-left: 5px;
+            }
+
+        .box-dias .cima #temp {
+            font-size: 50px;
+        }
+
+        .box-dias .cima #descricao {
+            font-size: 18px;
+        }   
+
+    .box-dias .baixo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 169px;
+        padding: 30px;
+
+        color: var(--preto);
+
+        border-radius: 0px 0px 15px 15px;
+        background: linear-gradient(180deg, #E9E9E9 0%, rgba(255, 255, 255, 0.00) 100%);    
+    }
+        .box-dias .baixo .texto {
+            color: #838383;
+            font-size: 15px;
+            line-height: 48px;
+        }
+
+        .box-dias .baixo .dados {
+            font-size: 15px;
+            color: #676767;
+            color: var(--preto);
+            text-align: right;
+        }
+
+/* Clicado */
+
+.dias .clicado {
+    background-image: linear-gradient(92deg, #72C4FF 0%, #077BCF 100%);
+}

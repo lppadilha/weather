@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="horas">
+            <img src="teste/1.png" alt="">
+            <img src="teste/2.png" alt="">
+            <img src="teste/3.png" alt="">
+            <img src="teste/4.png" alt="">
+            <img src="teste/5.png" alt="">
+            <img src="teste/6.png" alt="">
+            <img src="teste/7.png" alt="">
+            <img src="teste/8.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const horas = document.querySelector('.horas')
+
+    var puxando = false, prevPageX, prevScrollLeft
+
+    const comecouPuxar = (e) => {
+        puxando = true
+        prevPageX = e.pageX
+        prevScrollLeft = horas.scrollLeft
+    }
+    
+    const movendo = (e) => {
+        if(!puxando) return
+        e.preventDefault()
+        let positionDiff = e.pageX - prevPageX
+        horas.scrollLeft = prevScrollLeft - positionDiff
+    }
+
+    const parouPuxar = () => {
+        puxando = false
+    }
+
+    horas.addEventListener('mousedown', comecouPuxar)
+    horas.addEventListener('mouseup', parouPuxar)
+    horas.addEventListener('mousemove', movendo)
+</script>

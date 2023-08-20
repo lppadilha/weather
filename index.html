@@ -1,11 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Climinha</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dias.css">
+    <link rel="stylesheet" href="styles/horas.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
+
 <body>
-    
+    <div class="header">
+        <div class="logo">
+            <img src="assets/imgs/logo.svg" alt="Logo">
+            <p>climinha</p>
+        </div>
+        <div class="procurar">
+            <input type="text" placeholder="Procure por uma cidade...">
+            <img src="assets/icons/procurar.svg" alt="Procurar">
+        </div>
+        <div class="botoes">
+            <div class="botao botao0 noturno" onclick="clicouBotao('0')">
+                <div class="bola bola0"></div>
+            </div>
+            <div class="botao botao1 celsius" onclick="clicouBotao('1')">
+                <div class="bola bola1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="meio">
+            <div class="esquerda">
+                <p id="cidade">Florianopolis</p>
+                <p id="data">Segunda, 14 de Agosto, 2023</p>
+                <div class="detalhes">
+                    <div class="box-detalhes vento">
+                        <div class="icone-detalhes">
+                            <img src="assets/icons/vento.svg" alt="Icone vento">
+                        </div>
+                        <div class="dados">
+                            <p id="texto">Vento</p>
+                            <p id="valor">12 km/h</p>
+                        </div>
+                    </div>
+                    <div class="box-detalhes por-do-sol">
+                        <div class="icone-detalhes">
+                            <img src="assets/icons/por-do-sol.svg" alt="Icone vento">
+                        </div>
+                        <div class="dados">
+                            <p id="texto">Por do sol</p>
+                            <p id="valor">18:30 pm</p>
+                        </div>
+                    </div>
+                    <div class="box-detalhes umidade">
+                        <div class="icone-detalhes">
+                            <img src="assets/icons/umidade.svg" alt="Icone vento">
+                        </div>
+                        <div class="dados">
+                            <p id="texto">Umidade</p>
+                            <p id="valor">12%</p>
+                        </div>
+                    </div>
+                    <div class="box-detalhes vento">
+                        <div class="icone-detalhes">
+                            <img src="assets/icons/prob-de-chuva.svg" alt="Icone vento">
+                        </div>
+                        <div class="dados">
+                            <p id="texto">Prob. de Chuva</p>
+                            <p id="valor">3%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="direita">
+                <img src="assets/imgs/nuvem-chuva.png" alt="Nuvem">
+                <div class="dados">
+                    <p id="temp">14°C</p>
+                    <p id="media">12°C - 18°C</p>
+                    <p id="descricao">Parcialmente nublado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dias noselect">
+        <div class="box-dias dia0" onclick="clicouDia('0')">
+            <div class="cima clicado">
+                <p id="dia">Hoje<img src="assets/icons/tempo_nublado.svg" alt="Icone nublado"></p>
+                <p id="temp">19°C</p>
+                <p id="descricao">Parcialmente nublado</p>
+            </div>
+            <div class="baixo">
+                <div class="texto">
+                    Vento: <br>
+                    Umidade: <br>
+                    Chance de Chuva:
+                </div>
+                <div class="dados">
+                    <span id="vento">12 km/h</span> <br>
+                    <span id="umidade">12%</span> <br>
+                    <span id="descricao">3%</span>
+                </div>
+            </div>
+        </div>
+        <div class="box-dias dia1" onclick="clicouDia('1')">
+            <div class="cima">
+                <p id="dia">Quinta-Feira<img src="assets/icons/tempo_nublado.svg" alt="Icone nublado"></p>
+                <p id="temp">22°C</p>
+                <p id="descricao">Nublado</p>
+            </div>
+            <div class="baixo">
+                <div class="texto">
+                    Vento: <br>
+                    Umidade: <br>
+                    Chance de Chuva:
+                </div>
+                <div class="dados">
+                    <span id="vento">16 km/h</span> <br>
+                    <span id="umidade">7%</span> <br>
+                    <span id="descricao">2%</span>
+                </div>
+            </div>
+        </div>
+        <div class="box-dias dia2" onclick="clicouDia('2')">
+            <div class="cima">
+                <p id="dia">Sexta-Feira<img src="assets/icons/tempo_nublado.svg" alt="Icone nublado"></p>
+                <p id="temp">24°C</p>
+                <p id="descricao">Ensolarado</p>
+            </div>
+            <div class="baixo">
+                <div class="texto">
+                    Vento: <br>
+                    Umidade: <br>
+                    Chance de Chuva:
+                </div>
+                <div class="dados">
+                    <span id="vento">7 km/h</span> <br>
+                    <span id="umidade">4%</span> <br>
+                    <span id="descricao">12%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="horas-container noselect">
+        <div class="horas">
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+            <div class="hora hora0">
+                <p id="temp">21°C</p>
+                <img src="assets/icons/sol.svg" alt="Icone sol">
+                <p id="horario">01:00</p>
+                <p id="turno">PM</p>
+            </div>
+        </div>
+        <div class="mask mask-left"></div>
+        <div class="mask mask-right"></div>
+    </div>
+    <div class="footer">
+        footer
+    </div>
 </body>
+
 </html>
+<script src="scripts/get-data.js"></script>
+<script src="scripts/clicou-botao.js"></script>
+<script src="scripts/arrastando-horas.js"></script>
+<script>
+    var dia = []
+    var cima = []
+
+    for(var i = 0; i < 3; i++) {
+        dia[i] = document.querySelector(`.dia${i}`)
+        cima[i] = document.querySelector(`.dia${i} .cima`)
+    }
+
+    const clicouDia = (e) => {
+        if(cima[e].classList.contains('clicado')) return
+
+        for(var i = 0; i < 3; i++) {
+            if(cima[i].classList.contains('clicado')) {
+                cima[i].classList.remove('clicado')
+            }
+        }
+
+        cima[e].classList.toggle('clicado')
+    }
+</script>

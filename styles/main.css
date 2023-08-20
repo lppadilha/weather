@@ -1,0 +1,127 @@
+.main {
+    width: 100%;
+
+    background: linear-gradient(180deg, #319EED 0%, #36ABFF 52.08%, #1379C2 100%);
+
+    padding: 160px var(--margin-all) 130px;
+}
+
+.meio {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+/* Esquerda */
+
+.esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    color: white;
+}
+    .esquerda #cidade {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 70%;
+    }
+
+    .esquerda #data {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+.esquerda .detalhes {
+    width: 400px;
+    border-radius: 20px;
+
+    background-color: white;
+}
+
+/* Detalhes */
+
+.detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    padding: 15px 30px;
+
+    color: var(--preto);
+}
+    .detalhes .box-detalhes {
+        display: flex;
+        align-items: center;
+
+        width: 50%;
+        height: 37px;
+        margin: 15px 0;
+    }
+        .detalhes .box-detalhes p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+    .detalhes .icone-detalhes {
+        position: relative;
+
+        height: 35px;
+        width: 35px;
+
+        border-radius: 10px;
+        background: var(--azul);
+    }
+        .detalhes .icone-detalhes img {
+            position: absolute;
+            top: 8px;
+            right: 7px;
+
+            width: 20px;
+            height: 20px;
+        }
+
+/* Direita */
+
+.direita {
+    width: 230px;
+    height: 250px;
+
+    border-radius: 15px;
+    background: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+    .direita img {
+        width: 100px;
+        height: 100px;
+    }
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    text-align: center;
+}
+    .dados #temp {
+        font-size: 40px;
+        font-weight: 500;   
+    }
+
+    .dados #media {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .dados #descricao {
+        font-size: 17px;
+        font-weight: 400;
+    }

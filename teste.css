@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(49, 49, 49);
+}
+
+.horas {
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+
+    background-color: rgb(175, 174, 174);
+    width: 1000px;
+    height: 300px;
+}
+    .horas img {
+        min-width: 200px;
+        height: 200px;
+        background-color: grey;
+        cursor: pointer;
+    }
