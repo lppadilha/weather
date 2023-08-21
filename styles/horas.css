@@ -17,6 +17,10 @@
     cursor: pointer;
 }
     .horas .hora {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         min-width: 117px;
         padding: 20px 0;
 
@@ -32,6 +36,11 @@
 
         .horas .hora #temp {
 
+        }
+        
+        .horas .hora img {
+            height: 60px;
+            width: 60px;
         }
 
         .horas .hora #horario {

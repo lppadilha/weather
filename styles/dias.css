@@ -1,6 +1,6 @@
 .dias {
     display: flex;
-    gap: 50px;
+    gap: 60px;
 
     margin: 80px var(--margin-all) 60px;
 }
@@ -26,11 +26,18 @@
             opacity: 0.9;
         }
 
-        .box-dias .cima #dia {
+        .box-dias .cima .icone {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        .box-dias .cima .icone #dia {
             font-size: 18px;
         }
-            .box-dias .cima #dia img {
-                margin-left: 5px;
+            .box-dias .cima .icone #icon {
+                height: 30px;
+                width: 30px;
             }
 
         .box-dias .cima #temp {
@@ -56,7 +63,7 @@
         .box-dias .baixo .texto {
             color: #838383;
             font-size: 15px;
-            line-height: 48px;
+            line-height: 46px;
         }
 
         .box-dias .baixo .dados {

@@ -39,6 +39,10 @@
 
     background-color: white;
 }
+    .esquerda .detalhes .box-detalhes .dados {
+        text-align: left;
+        line-height: 70%;
+    }
 
 /* Detalhes */
 
