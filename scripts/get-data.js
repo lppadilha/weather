@@ -11,6 +11,36 @@ window.onload = function() {
     getData("rio de janeiro")
 }
 
+// arrastando 
+
+const horas = document.querySelector('.horas')
+
+var puxando = false, prevPageX, prevScrollLeft
+
+const comecouPuxar = (e) => {
+    horas.style.scrollBehavior = "auto"
+    puxando = true
+    prevPageX = e.pageX
+    prevScrollLeft = horas.scrollLeft
+}
+
+const movendo = (e) => {
+    if (!puxando) return
+    e.preventDefault()
+    let positionDiff = e.pageX - prevPageX
+    horas.scrollLeft = prevScrollLeft - positionDiff
+}
+
+const parouPuxar = () => {
+    puxando = false
+    horas.style.scrollBehavior = "smooth"
+}
+
+horas.addEventListener('mousedown', comecouPuxar)
+horas.addEventListener('mouseup', parouPuxar)
+horas.addEventListener('mouseleave', parouPuxar)
+horas.addEventListener('mousemove', movendo)
+
 /// dia
 
 var dia = []
@@ -33,6 +63,8 @@ const clicouDia = (e) => {
     cima[e].classList.toggle('clicado')
     ondeEstaClicado = e
     setHoras()
+
+    horas.scrollLeft = 0
 }
 
 /////

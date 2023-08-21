@@ -8,6 +8,7 @@
 .horas {
     display: flex;
     overflow: hidden;
+    scroll-behavior: smooth;
 
     padding: 15px 20px 0 20px;
 
